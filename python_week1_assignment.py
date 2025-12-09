@@ -19,11 +19,11 @@ import pandas as pd
 #1. dictionaries list:
 
 data = {
-    "subject_id": list(range(1, 7)),
-    "gender": ["f", "m", "f", "f", "m", "m"],
-    "age": [25, 30, 27, 19, 24, 35],
-    "depression": [1, 1, 0, 0, 1, 0]
-
+	"subject_id": list(range(1, 7)),
+	n = len(subject_id)
+	gender = np.random.choice(["f", "m"], size=n, replace=True)
+	age = np.random.randint(18, 41, size=n)
+	depression = np.random.binomial(1, p=0.3, size=n)
 }
 
 #2. create df
